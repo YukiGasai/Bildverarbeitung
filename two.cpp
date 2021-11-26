@@ -2,6 +2,7 @@
 #include "CImage.h"
 #include "CColor.h"
 #include "two.h"
+
 using namespace bvme;
 
 int getMiddleGrayLevel(CImage* inputImage) {
@@ -84,11 +85,11 @@ CImage Histogrammlinearisierung(CImage* inputImage) {
 	{
 		for (int x = 0; x < width; x++)
 		{
-			int currentGray = 0;
-			currentGray += inputImage->getPointValue(y, x).getBlue();
-			currentGray += inputImage->getPointValue(y, x).getGreen();
-			currentGray += inputImage->getPointValue(y, x).getRed();
-			currentGray = currentGray / 3;
+			int currentGray = inputImage->getPointValue(y,x).getGrey();
+			//currentGray += inputImage->getPointValue(y, x).getBlue();
+			//currentGray += inputImage->getPointValue(y, x).getGreen();
+			//currentGray += inputImage->getPointValue(y, x).getRed();
+			//currentGray = currentGray / 3;
 
 			histogramm[currentGray] += 1;
 
@@ -99,9 +100,15 @@ CImage Histogrammlinearisierung(CImage* inputImage) {
 
 	for (int i = 0; i < 256; i++)
 	{
-		cumulatedValue += histogramm[i] / (width * height);
+		cumulatedValue += histogramm[i];
 
 		newHistogramm[i] = cumulatedValue;
+	}
+
+	for (int i = 0; i < 256; i++)
+	{
+
+		newHistogramm[i] /= (width * height);
 	}
 
 
@@ -109,11 +116,14 @@ CImage Histogrammlinearisierung(CImage* inputImage) {
 	{
 		for (int x = 0; x < width; x++)
 		{
-			int currentGray = 0;
+					int currentGray = inputImage->getPointValue(y,x).getGrey();
+			
+			/*
 			currentGray += inputImage->getPointValue(y, x).getBlue();
 			currentGray += inputImage->getPointValue(y, x).getGreen();
 			currentGray += inputImage->getPointValue(y, x).getRed();
 			currentGray = currentGray / 3;
+			*/
 
 			int betterGray = newHistogramm[currentGray] * 255;
 

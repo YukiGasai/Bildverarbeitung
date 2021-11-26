@@ -152,13 +152,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="eight.cpp" />
+    <ClCompile Include="five.cpp" />
+    <ClCompile Include="four.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="one.cpp" />
+    <ClCompile Include="seven.cpp" />
+    <ClCompile Include="three.cpp" />
     <ClCompile Include="two.cpp" />
     <ClCompile Include="two.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="eight.h" />
+    <ClInclude Include="five.h" />
+    <ClInclude Include="four.h" />
     <ClInclude Include="one.h" />
+    <ClInclude Include="seven.h" />
+    <ClInclude Include="three.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
