@@ -8,9 +8,13 @@
 #include "five.h"
 #include "seven.h"
 #include "eight.h"
+#include "nine.h"
+
 #define SIZE 3
 
 using namespace bvme;
+
+
 
 
 
@@ -116,10 +120,19 @@ int main()
 
 
 
-	Sobelfilter(imageRose);
+	//Sobelfilter(imageRose);
 
 	
 
+
+	//X IST HEIGHT 
+	//Y IST WIDTH WICHTIG
+
+	//Wavelettransformation
+	CImage imageSquare("Images/calvin.bmp");
+	imageSquare = imageSquare.getGreyscaleImage();
+
+	Wavelettransformation(imageSquare, 4).showImage();
 
 
 
