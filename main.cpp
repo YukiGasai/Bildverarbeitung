@@ -9,6 +9,7 @@
 #include "seven.h"
 #include "eight.h"
 #include "nine.h"
+#include "ten.h"
 
 #define SIZE 3
 
@@ -129,10 +130,28 @@ int main()
 	//Y IST WIDTH WICHTIG
 
 	//Wavelettransformation
-	CImage imageSquare("Images/calvin.bmp");
-	imageSquare = imageSquare.getGreyscaleImage();
+	//CImage imageSquare("Images/calvin.bmp");
+	//imageSquare = imageSquare.getGreyscaleImage();
 
-	Wavelettransformation(imageSquare, 4).showImage();
+	//Wavelettransformation(imageSquare, 4).showImage();
+
+	//Dilatation
+
+	CImage rice("Images/reis.bmp");
+	rice = rice.getGreyscaleImage();
+	rice.showImage("OG");
+	rice = Erosion(rice, 3);
+	rice.showImage("Erosion");
+	rice = Dilatation(rice, 3);
+	rice.showImage("Dilatation");
+
+	//CImage rice("Images/reis.bmp");
+	//rice = rice.getGreyscaleImage();
+	//rice.showImage("OG");
+	//rice = Dilatation(rice, 3);
+	//rice.showImage("Dilatation");
+	//rice = Erosion(rice, 3);
+	//rice.showImage("Erosion");
 
 
 
