@@ -10,6 +10,7 @@
 #include "eight.h"
 #include "nine.h"
 #include "ten.h"
+#include "eleven.h"
 
 #define SIZE 3
 
@@ -137,13 +138,13 @@ int main()
 
 	//Dilatation
 
-	CImage rice("Images/reis.bmp");
-	rice = rice.getGreyscaleImage();
-	rice.showImage("OG");
-	rice = Erosion(rice, 3);
-	rice.showImage("Erosion");
-	rice = Dilatation(rice, 3);
-	rice.showImage("Dilatation");
+	//CImage rice("Images/reis.bmp");
+	//rice = rice.getGreyscaleImage();
+	//rice.showImage("OG");
+	//rice = Erosion(rice, 3);
+	//rice.showImage("Erosion");
+	//rice = Dilatation(rice, 3);
+	//rice.showImage("Dilatation");
 
 	//CImage rice("Images/reis.bmp");
 	//rice = rice.getGreyscaleImage();
@@ -153,6 +154,10 @@ int main()
 	//rice = Erosion(rice, 3);
 	//rice.showImage("Erosion");
 
+	CImage binary("Images/schachbrett.bmp");
+	binary = binary.getGreyscaleImage();
+	FloodFillMain(&binary);
+	binary.showImage();
 
 
 	system("pause");
