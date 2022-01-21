@@ -162,6 +162,7 @@
     <ClCompile Include="seven.cpp" />
     <ClCompile Include="ten.cpp" />
     <ClCompile Include="three.cpp" />
+    <ClCompile Include="twelve.cpp" />
     <ClCompile Include="two.cpp" />
     <ClCompile Include="two.h" />
   </ItemGroup>
@@ -175,6 +176,7 @@
     <ClInclude Include="seven.h" />
     <ClInclude Include="ten.h" />
     <ClInclude Include="three.h" />
+    <ClInclude Include="twelve.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,6 +11,7 @@
 #include "nine.h"
 #include "ten.h"
 #include "eleven.h"
+#include "twelve.h"
 
 #define SIZE 3
 
@@ -154,11 +155,18 @@ int main()
 	//rice = Erosion(rice, 3);
 	//rice.showImage("Erosion");
 
+	//CImage binary("Images/schachbrett.bmp");
+	//binary = binary.getGreyscaleImage();
+	//FloodFillMain(&binary);
+	//binary.showImage();
+
+
 	CImage binary("Images/schachbrett.bmp");
 	binary = binary.getGreyscaleImage();
-	FloodFillMain(&binary);
+	binary = GetBinary(binary);
+	binary = Moravec(binary, 3);
+	binary = LightUp(binary);
 	binary.showImage();
-
 
 	system("pause");
 	return 0;
