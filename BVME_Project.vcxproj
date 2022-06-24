@@ -161,6 +161,7 @@
     <ClCompile Include="one.cpp" />
     <ClCompile Include="seven.cpp" />
     <ClCompile Include="ten.cpp" />
+    <ClCompile Include="thirteen.cpp" />
     <ClCompile Include="three.cpp" />
     <ClCompile Include="twelve.cpp" />
     <ClCompile Include="two.cpp" />
@@ -175,6 +176,7 @@
     <ClInclude Include="one.h" />
     <ClInclude Include="seven.h" />
     <ClInclude Include="ten.h" />
+    <ClInclude Include="thirteen.h" />
     <ClInclude Include="three.h" />
     <ClInclude Include="twelve.h" />
   </ItemGroup>

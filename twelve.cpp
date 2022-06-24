@@ -53,7 +53,7 @@ CImage Moravec(CImage& inputImage, int size) {
 
 
 
-CImage GetBinary(CImage& inputImage) {
+CImage GetBinary(CImage& inputImage, int one = 1) {
 	int ImageHeight = inputImage.getHeight();
 	int ImageWidth = inputImage.getWidth();
 
@@ -63,7 +63,7 @@ CImage GetBinary(CImage& inputImage) {
 		{
 			int grey = inputImage.getPointValue(y, x).getGrey();
 			if (grey != 0) {
-				CColor newGreyColor = CColor(1);
+				CColor newGreyColor = CColor(one);
 				inputImage.setPointValue(y, x, newGreyColor);
 			}
 		}
